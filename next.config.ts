@@ -1,8 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  images: {
+    localPatterns: [
+      {
+        pathname: "/images/**",
+        search: "",
+      },
+    ],
+  },
+  serverExternalPackages: ["@prisma/client", "bcryptjs"],
 };
 
 export default nextConfig;
