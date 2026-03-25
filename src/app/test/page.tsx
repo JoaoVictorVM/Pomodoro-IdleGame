@@ -6,6 +6,8 @@ import { PomodoroControls } from "@/components/pomodoro/PomodoroControls";
 import { PomodoroConfig } from "@/components/pomodoro/PomodoroConfig";
 import { usePomodoro } from "@/hooks/usePomodoro";
 import { usePomodoroStore } from "@/store/pomodoroStore";
+import { CoinDisplay } from "@/components/game/CoinDisplay";
+import { GameArena } from "@/components/game/GameArena";
 
 function PomodoroTest() {
   usePomodoro(); // ativa o tick
@@ -27,6 +29,22 @@ function PomodoroTest() {
       </button>
       <p className="text-xs text-[#5a5a72]">Fase atual: {phase}</p>
       {showConfig && <PomodoroConfig onClose={() => setShowConfig(false)} />}
+    </div>
+  );
+}
+
+function GameTest() {
+  usePomodoro();
+  return (
+    <div className="flex flex-col gap-4 mt-6">
+      <h2 className="text-lg font-semibold text-[#f0f0f5]">
+        ⚔️ Teste da Arena
+      </h2>
+      <CoinDisplay />
+      <GameArena />
+      <p className="text-xs text-[#5a5a72]">
+        Inicie o Pomodoro acima e veja o herói atacar o inimigo
+      </p>
     </div>
   );
 }
@@ -104,6 +122,7 @@ export default function TestPage() {
       )}
 
       <PomodoroTest />
+      <GameTest />
     </div>
   );
 }
