@@ -9,6 +9,7 @@ import { usePomodoroStore } from "@/store/pomodoroStore";
 import { CoinDisplay } from "@/components/game/CoinDisplay";
 import { GameArena } from "@/components/game/GameArena";
 import { HeroStats } from "@/components/stats/HeroStats";
+import { Shop } from "@/components/shop/Shop";
 
 function PomodoroTest() {
   usePomodoro(); // ativa o tick
@@ -35,7 +36,6 @@ function PomodoroTest() {
 }
 
 function GameTest() {
-  usePomodoro();
   return (
     <div className="flex flex-col gap-4 mt-6">
       <h2 className="text-lg font-semibold text-[#f0f0f5]">
@@ -44,6 +44,7 @@ function GameTest() {
       <CoinDisplay />
       <GameArena />
       <HeroStats />
+      <Shop />
       <p className="text-xs text-[#5a5a72]">
         Inicie o Pomodoro acima e veja o herói atacar o inimigo
       </p>

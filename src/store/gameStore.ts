@@ -55,7 +55,7 @@ interface GameStore {
 }
 
 export const useGameStore = create<GameStore>((set, get) => ({
-  coins: 0,
+  coins: 100,
   currentWave: 1,
   damage: BASE_DAMAGE,
   speed: BASE_SPEED,
