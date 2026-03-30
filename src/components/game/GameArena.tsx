@@ -1,3 +1,4 @@
+// src/components/game/GameArena.tsx
 "use client";
 
 import { useGameLoop } from "@/hooks/useGameLoop";
@@ -18,28 +19,28 @@ export function GameArena() {
 
   return (
     <div
-      className={`relative w-full h-48 rounded-xl border border-[#2a2a3a] ${bgColor[phase]} flex items-center justify-between px-12 overflow-hidden transition-colors duration-700`}
+      className={`relative w-full h-48 sm:h-56 rounded-xl border border-[#2a2a3a] ${bgColor[phase]} flex items-end justify-between px-8 sm:px-16 pb-4 overflow-hidden transition-colors duration-700`}
     >
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-[#2a2a3a]" />
-
+      {/* Herói */}
       <Hero />
 
+      {/* Mensagem de fase */}
       {phase === "IDLE" && (
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <span className="text-[#5a5a72] text-sm">
             Inicie o Pomodoro para começar
           </span>
         </div>
       )}
-
       {phase === "BREAK" && (
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <span className="text-[#2dc653] text-sm">
             Descansando... Visite a loja! 🛍️
           </span>
         </div>
       )}
 
+      {/* Inimigo */}
       <Enemy />
     </div>
   );
