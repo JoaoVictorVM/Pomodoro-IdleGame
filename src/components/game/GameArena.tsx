@@ -1,12 +1,10 @@
 "use client";
 
-import { useGameLoop } from "@/hooks/useGameLoop";
 import { usePomodoroStore } from "@/store/pomodoroStore";
 import { Hero } from "./Hero";
 import { Enemy } from "./Enemy";
 
 export function GameArena() {
-  useGameLoop();
   const { phase } = usePomodoroStore();
 
   const bgColor = {
@@ -27,7 +25,6 @@ export function GameArena() {
     >
       <Hero />
 
-      {/* Mensagens de fase */}
       {phase === "IDLE" && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <span className="text-[#4C566A] text-sm">

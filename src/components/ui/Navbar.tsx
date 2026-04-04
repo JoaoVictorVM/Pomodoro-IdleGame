@@ -12,12 +12,12 @@ export function Navbar() {
     <nav className="w-full border-b border-[#3B4252] bg-[#2E3440]">
       <div className="w-full flex justify-center">
         <div className="w-full max-w-2xl px-4 h-14 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 cursor-default">
             <div className="w-7 h-7 bg-[#BF616A] rounded-lg flex items-center justify-center">
               <Timer size={14} className="text-[#ECEFF4]" />
             </div>
             <span className="text-[#ECEFF4] font-semibold text-sm">
-              Pomodoro Idle
+              Pomodoro Idle Game
             </span>
           </Link>
 

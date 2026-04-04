@@ -3,7 +3,7 @@ import { SessionProvider } from "@/components/providers/SessionProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Pomodoro Idle",
+  title: "Pomodoro Idle Game",
   description: "Seja produtivo enquanto seu herói luta!",
 };
 

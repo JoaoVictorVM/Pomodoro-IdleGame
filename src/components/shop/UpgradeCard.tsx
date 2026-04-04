@@ -62,7 +62,7 @@ export function UpgradeCard({
         onClick={() => onBuy(type)}
         disabled={isLocked || !canAfford || isLoading}
         className={`
-          flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex-shrink-0
+          flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:cursor-pointer text-xs font-medium transition-all flex-shrink-0
           ${
             isLocked
               ? "bg-[#2E3440] text-[#4C566A] cursor-not-allowed"

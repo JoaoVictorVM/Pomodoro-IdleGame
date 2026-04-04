@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useGame } from "@/hooks/useGame";
-import { usePomodoroStore } from "@/store/pomodoroStore";
 import { PomodoroTimer } from "@/components/pomodoro/PomodoroTimer";
 import { PomodoroControls } from "@/components/pomodoro/PomodoroControls";
 import { PomodoroConfig } from "@/components/pomodoro/PomodoroConfig";
@@ -30,7 +29,7 @@ export default function HomePage() {
               </span>
               <button
                 onClick={() => setShowConfig(true)}
-                className="flex items-center gap-1.5 text-xs text-[#4C566A] hover:text-[#D8DEE9] border border-[#3B4252] hover:border-[#434C5E] rounded-lg px-3 py-1.5 transition-colors"
+                className="flex items-center gap-1.5 text-xs hover:cursor-pointer text-[#4C566A] hover:text-[#D8DEE9] border border-[#3B4252] hover:border-[#434C5E] rounded-lg px-3 py-1.5 transition-colors"
               >
                 <Settings size={12} />
                 Configurar

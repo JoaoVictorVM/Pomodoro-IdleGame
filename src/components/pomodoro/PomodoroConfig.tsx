@@ -34,14 +34,14 @@ export function PomodoroConfig({ onClose }: Props) {
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4">
-      <div className="nord-card p-6 w-full max-w-sm">
+      <div className="bg-[#2E3440] border border-[#3B4252] rounded-lg p-6 w-full max-w-sm">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-sm font-semibold text-[#ECEFF4]">
             Configurar Pomodoro
           </h3>
           <button
             onClick={onClose}
-            className="text-[#4C566A] hover:text-[#ECEFF4] transition-colors"
+            className="text-[#4C566A] hover:text-[#ECEFF4] transition-colors hover:cursor-pointer"
           >
             <X size={16} />
           </button>
@@ -81,13 +81,13 @@ export function PomodoroConfig({ onClose }: Props) {
         <div className="flex gap-3 mt-6">
           <button
             onClick={onClose}
-            className="flex-1 px-4 py-2 rounded-lg text-sm text-[#4C566A] border border-[#3B4252] hover:border-[#434C5E] transition-colors"
+            className="flex-1 px-4 py-2 rounded-lg text-sm text-[#434C5E] hover:text-[#4C566A] border border-[#3B4252] hover:border-[#434C5E] hover:cursor-pointer transition-colors"
           >
             Cancelar
           </button>
           <button
             onClick={handleSave}
-            className="flex-1 px-4 py-2 rounded-lg text-sm font-medium bg-[#5E81AC] hover:bg-[#81A1C1] text-[#ECEFF4] transition-colors"
+            className="flex-1 px-4 py-2 rounded-lg text-sm font-medium bg-[#5E81AC] hover:bg-[#81A1C1] text-[#ECEFF4] hover:cursor-pointer transition-colors"
           >
             Salvar
           </button>
